@@ -1,8 +1,23 @@
 // Javascript goes here
-alert("Found my JS");
-
 document.querySelector("button").addEventListener("click", handleClick);
 
-function handleClick(){
-  alert("Hmmm, human music.");
+function handleClick() {
+  var name1 = document.getElementById("name1").value;
+  var birthday1 = (Date.parse(document.getElementById("birthday1").value) / 86400000);
+  var name2 = document.getElementById("name2").value;
+  var birthday2 = (Date.parse(document.getElementById("birthday2").value) / 86400000);
+  var rawDays = Math.abs(birthday1 - birthday2);
+  console.log(rawDays);
+  var yearsApart = (Math.floor(rawDays / 365));
+  console.log(yearsApart);
+  var monthsApart = (Math.floor((rawDays % 365) / 30.5));
+  console.log(monthsApart);
+  var daysApart = (Math.floor((rawDays % 365) % 30.5));
+  console.log(daysApart);
+  if (birthday1 < birthday2) {
+    document.querySelector("h1").innerHTML = (" " + name1 + " is " + yearsApart + " years, " + monthsApart + " months, and " + daysApart + " days older than " + name2 + "!");
+  } else if (birthday1 >= birthday2) {
+    document.querySelector("h1").innerHTML = (" " + name1 + " is " + yearsApart + " years, " + monthsApart + " months, and " + daysApart + " days older than " + name2 + "!");
+  }
+
 }

@@ -9,3 +9,13 @@ body{
 .row {
   padding: 3%;
 }
+
+.results {
+  border-radius: 25px;
+  border: 2px solid #00acee;
+  padding: 20px;
+}
+
+.myBlue {
+  background-color: #00acee;
+}
