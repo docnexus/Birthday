@@ -17,7 +17,7 @@ function handleClick() {
   if (birthday1 < birthday2) {
     document.querySelector("h1").innerHTML = (" " + name1 + " is " + yearsApart + " years, " + monthsApart + " months, and " + daysApart + " days older than " + name2 + "!");
   } else if (birthday1 >= birthday2) {
-    document.querySelector("h1").innerHTML = (" " + name1 + " is " + yearsApart + " years, " + monthsApart + " months, and " + daysApart + " days older than " + name2 + "!");
+    document.querySelector("h1").innerHTML = (" " + name2 + " is " + yearsApart + " years, " + monthsApart + " months, and " + daysApart + " days older than " + name1 + "!");
   }
 
 }
